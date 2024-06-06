@@ -30,7 +30,7 @@ for (let i = 0; i < 1000; i++) {
 }
 ```
 
-6. You should now be able hear a noise when you have pending helpdesks. However, you will need to keep the tab open so separate the tab into a new window if you need to do other things.
+6. You should now be able hear a noise when you have pending helpdesks. **However, you will need to keep the tab open so separate the tab into a new window if you need to do other things.**
 
 <sub>note: the noise will repeat every 30 seconds until the helpdesk is taken (you can play with the script above to change the interval or mute your tab once you've got the message).
 
