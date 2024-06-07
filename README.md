@@ -20,6 +20,9 @@ for (let i = 0; i < 5000; i++) {
   setTimeout(() => {
     document.querySelector(".nc-interactive-ctaButton").click(); // refresh helpdesk list
     console.log(`check ${i + 1}`); // to show script is running
+    var ulElement = document.querySelector(
+      'ul[aria-label="Pending helpdesks"]'
+    );
     var listContents = pendingHelpdeskList.getElementsByTagName("li");
     if (listContents.length > 0) {
       var ulElement = document.querySelector(
