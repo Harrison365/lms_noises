@@ -10,7 +10,7 @@ Hello. This is a repo to get your LMS helpdesk playing a noise when you have pen
 
 3. Run `node noiseServer.js`
 
-4. Open the LMS and go to your seminar group's helpdesk
+4. Open the LMS and go to your seminar group's helpdesk (preferrably in Chrome, some permission issues came up with Firefox).
 
 5. Open the browser console (using `inspect` or `Cmd + Option + J`) and run the following code:
 
@@ -50,8 +50,6 @@ for (let i = 0; i < 5000; i++) {
 ```
 
 6. You should now be able hear a noise when you have pending helpdesks. **<u>However, you will need to keep the tab open so separate the tab into a new window if you need to do other things :) </u>**
-
-<sub>note: the noise will repeat every 30 seconds until the helpdesk is taken (you can play with the script above to change the interval or mute your tab once you've got the message).
 
 ## Changing the sound
 
