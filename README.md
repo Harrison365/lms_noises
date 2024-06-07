@@ -15,18 +15,32 @@ Hello. This is a repo to get your LMS helpdesk playing a noise when you have pen
 5. Open the browser console (using `inspect` or `Cmd + Option + J`) and run the following code:
 
 ```javascript
-var pendingHelpdeskList = document.querySelector(
-  'ul[aria-label="Pending helpdesks"]'
-);
-for (let i = 0; i < 1000; i++) {
+let lastName = "";
+for (let i = 0; i < 5000; i++) {
   setTimeout(() => {
     document.querySelector(".nc-interactive-ctaButton").click(); // refresh helpdesk list
     console.log(`check ${i + 1}`); // to show script is running
     var listContents = pendingHelpdeskList.getElementsByTagName("li");
     if (listContents.length > 0) {
-      new Audio("http://localhost:8080/mp3").play();
+      var ulElement = document.querySelector(
+        'ul[aria-label="Pending helpdesks"]'
+      );
+      var listItems = ulElement.getElementsByTagName("li");
+      var listItem1 = listItems[listItems.length - 1];
+      var article = listItem1.getElementsByTagName("article")[0];
+      var divLayer1 = article.getElementsByClassName(
+        "nc-layout-oppositeSides nc-layutil-internalBorder nc-layout-isolate"
+      )[0];
+      var hgroup = divLayer1.getElementsByTagName("hgroup")[0];
+      var h3 = divLayer1.getElementsByTagName("h3")[0];
+      var span = divLayer1.getElementsByTagName("span")[0];
+      var name = divLayer1.getElementsByTagName("a")[0].textContent;
+      if (name !== lastName) {
+        lastName = name;
+        new Audio("http://localhost:8080/mp3").play();
+      }
     }
-  }, i * 30000);
+  }, i * 10000);
 }
 ```
 
