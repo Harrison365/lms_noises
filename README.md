@@ -42,6 +42,8 @@ for (let i = 0; i < 5000; i++) {
         lastName = name;
         new Audio("http://localhost:8080/mp3").play();
       }
+    } else {
+      lastName = "";
     }
   }, i * 10000);
 }
