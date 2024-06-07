@@ -15,14 +15,14 @@ Hello. This is a repo to get your LMS helpdesk playing a noise when you have pen
 5. Open the browser console (using `inspect` or `Cmd + Option + J`) and run the following code:
 
 ```javascript
+var pendingHelpdeskList = document.querySelector(
+  'ul[aria-label="Pending helpdesks"]'
+);
 let lastName = "";
 for (let i = 0; i < 5000; i++) {
   setTimeout(() => {
     document.querySelector(".nc-interactive-ctaButton").click(); // refresh helpdesk list
     console.log(`check ${i + 1}`); // to show script is running
-    var pendingHelpdeskList = document.querySelector(
-      'ul[aria-label="Pending helpdesks"]'
-    );
     var listContents = pendingHelpdeskList.getElementsByTagName("li");
     if (listContents.length > 0) {
       var ulElement = document.querySelector(
