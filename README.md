@@ -49,7 +49,7 @@ for (let i = 0; i < 5000; i++) {
 }
 ```
 
-6. You should now be able hear a noise when you have a new pending helpdesk. **<u>However, you will need to keep the tab open so separate the tab into a new window if you need to do other things :) </u>**
+6. You should now be able hear a noise when you have a new pending helpdesk. **<u>However, you will need to keep the tab open so separate the tab into a new window if you need to do other things. Minimising the window will still keep it working :) </u>**
 
 ## Changing the sound
 
