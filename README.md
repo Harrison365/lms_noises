@@ -19,6 +19,7 @@ var pendingHelpdeskList = document.querySelector(
   'ul[aria-label="Pending helpdesks"]'
 );
 let lastName = "";
+new Audio("http://localhost:8080/mp3").play();
 for (let i = 0; i < 5000; i++) {
   setTimeout(() => {
     document.querySelector(".nc-interactive-ctaButton").click(); // refresh helpdesk list
