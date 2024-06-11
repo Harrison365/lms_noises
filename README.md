@@ -12,7 +12,7 @@ Hello. This is a repo to get your LMS helpdesk playing a noise when you have pen
 
 4. Open the LMS and go to your seminar group's helpdesk (preferrably in Chrome, some permission issues came up with Firefox).
 
-5. Open the browser console (using `inspect` or `Cmd + Option + J`) and run the following code (you may need to allow pasting permission):
+5. Open the browser console (using `inspect` or `Cmd + Option + J`) and run the following code (you may be prompted to allow pasting permission, please do):
 
 ```javascript
 var pendingHelpdeskList = document.querySelector(
